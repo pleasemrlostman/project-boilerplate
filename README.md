@@ -1,27 +1,60 @@
-# React + TypeScript + Vite
+# Project Boilerplate
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+React-hook-form, Tailwindcss, React-query(tanstack-query)를 이용해서 제작한 보일러플레이트
+회사내의 프로젝트를 빠르게 수행하기 위해 해당 보일러플레이트를 이용하여 작업을 실시
 
-Currently, two official plugins are available:
+## 디렉토리 구조
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-   parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-   },
 ```
-
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+project-boilerplate
+├─ .eslintrc.cjs
+├─ .gitignore
+├─ .husky
+│  ├─ pre-commit
+│  └─ _
+│     ├─ .gitignore
+│     └─ husky.sh
+├─ .prettierrc.json
+├─ index.html
+├─ package-lock.json
+├─ package.json
+├─ postcss.config.js
+├─ public
+│  └─ vite.svg
+├─ README.md
+├─ src
+│  ├─ App.tsx
+│  ├─ assets
+│  │  ├─ fonts
+│  │  ├─ icons
+│  │  └─ logos
+│  ├─ common
+│  │  ├─ api
+│  │  ├─ components
+│  │  │  ├─ button
+│  │  │  │  └─ index.tsx
+│  │  │  ├─ checkbox
+│  │  │  │  └─ index.tsx
+│  │  │  ├─ radio
+│  │  │  │  └─ index.tsx
+│  │  │  ├─ text
+│  │  │  │  └─ index.tsx
+│  │  │  └─ textarea
+│  │  ├─ hooks
+│  │  ├─ query
+│  │  │  └─ client.ts
+│  │  ├─ types
+│  │  └─ utils
+│  ├─ index.css
+│  ├─ main.tsx
+│  ├─ pages
+│  │  └─ dev
+│  ├─ routes
+│  │  ├─ dev.tsx
+│  │  └─ index.tsx
+│  └─ vite-env.d.ts
+├─ tailwind.config.js
+├─ tsconfig.json
+├─ tsconfig.node.json
+└─ vite.config.ts
+```
