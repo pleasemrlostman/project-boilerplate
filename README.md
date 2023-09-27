@@ -58,3 +58,36 @@ project-boilerplate
 ├─ tsconfig.node.json
 └─ vite.config.ts
 ```
+
+## 특징
+
+- 각 Input 컴포넌트들은 필수적으로 React-hook-form과 함께 사용해야한다
+- route 구조를 중심으로 pages 폴더가 생성된다
+
+## 폴더설명
+
+### pages 폴더는 routes 파일을 기준으로 각각의 폴더가 생성된다 해당 폴더의 index.tsx 파일은 라우팅에 매칭된다
+
+- api
+
+* axios 통신을 담당하는 함수들을 작성
+
+- components
+
+* 실제 화면을 그리는 components들을 작성한다 만약 각각 폴더에서 공통되는 component가 존재한다면 src/common/componets 폴더로 이동
+
+- hooks
+
+* 필요한 custom hooks를 작성한다, 마찬가지로 2번이상 반복되는 custom hooks은 src/common/hooks 폴더로 이동
+
+- query
+
+* react-query(tanstack-query)에 필요한 KEY, URL 값을 객체 또는 string 형식으로 저장해둔다
+
+- types
+
+* 해당 route에 필요한 d.ts파일을 모아둔다
+
+- utils
+
+* 해당 route에 필요한 util 함수들을 작성
