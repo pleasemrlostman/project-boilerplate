@@ -15,7 +15,7 @@ type Props = React.ComponentPropsWithoutRef<"input"> & {
   maxLength?: number;
   minLengthMsg?: string;
   maxLengthMsg?: string;
-  validateFn?: (
+  onValidation?: (
     value: string,
     formValues: Record<string, string>,
   ) => string | undefined | boolean;
@@ -42,7 +42,7 @@ const Input = ({
   minLength,
   minLengthMsg,
   onInputCallBack,
-  validateFn,
+  onValidation,
   ...props
 }: Props) => {
   const {
@@ -53,7 +53,6 @@ const Input = ({
 
   const [inputParams, setInputParams] = useState<boolean>(false);
   inputParams;
-
   //   const resetRegisterValue = useCallback(
   //     (registerName: string) => () => {
   //       setValue(registerName, "");
@@ -101,7 +100,7 @@ const Input = ({
                 message: minLengthMsg ? minLengthMsg : "",
               }
             : undefined,
-          validate: validateFn && validateFn,
+          validate: onValidation && onValidation,
         })}
         {...props}
         className={className}

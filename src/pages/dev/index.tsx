@@ -9,6 +9,10 @@ const elementsObject = [
     path: "input",
     title: "input",
   },
+  {
+    path: "image",
+    title: "image",
+  },
 ];
 
 const Dev = () => {
