@@ -13,6 +13,10 @@ const elementsObject = [
     path: "image",
     title: "image",
   },
+  {
+    path: "calendar",
+    title: "calendar",
+  },
 ];
 
 const Dev = () => {
