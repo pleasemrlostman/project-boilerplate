@@ -4,7 +4,6 @@ import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
 import App from "@/App.tsx";
 import "@/index.css";
 import { queryClient } from "@/common/query/client";
-
 ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
   <QueryClientProvider client={queryClient}>
     <App />
