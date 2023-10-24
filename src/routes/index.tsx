@@ -5,7 +5,6 @@ export const ErrorBoundary = () => {
   if (isRouteErrorResponse(error) && error.status === 404) <>not found</>;
   return <>not found</>;
 };
-
 export default [
   {
     path: "/",
