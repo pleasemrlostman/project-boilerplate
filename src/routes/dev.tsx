@@ -4,7 +4,6 @@ import ImageExample from "@/common/components/image/example";
 import CalendarExample from "@/common/components/calendar/example";
 import { RouteObject } from "react-router-dom";
 import Dev from "@/pages/dev";
-
 const dev: RouteObject = {
   path: "dev",
   element: <Dev />,
