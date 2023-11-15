@@ -17,6 +17,10 @@ const elementsObject = [
     path: "calendar",
     title: "calendar",
   },
+  {
+    path: "textarea",
+    title: "text area",
+  },
 ];
 
 const Dev = () => {
