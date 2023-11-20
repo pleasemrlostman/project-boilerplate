@@ -13,20 +13,12 @@ type TextAreaProps<T extends FieldValues> =
     _field?: ControllerRenderProps<T, Path<T>>;
     wrapClass?: string;
     className?: string;
-    cols?: number;
-    rows?: number;
-    name?: string;
-    id?: string;
   };
 
 const Textarea = <T extends FieldValues>({
   _field,
   wrapClass,
   className,
-  cols,
-  rows,
-  name,
-  id,
   ...props
 }: TextAreaProps<T>) => {
   const _className = twMerge("border", className);
@@ -36,10 +28,10 @@ const Textarea = <T extends FieldValues>({
         {..._field}
         {...props}
         className={_className}
-        name={name ?? ""}
-        id={id ?? ""}
-        cols={cols ? cols : 30}
-        rows={rows ? rows : 10}
+        name={props.name ?? ""}
+        id={props.id ?? ""}
+        cols={props.cols ? props.cols : 30}
+        rows={props.rows ? props.rows : 10}
       />
     </div>
   );

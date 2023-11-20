@@ -12,14 +12,14 @@ const Example = () => {
     "text-area": string;
   };
 
-  const onSubmit = (data: SubmitType) => alert(`현재 값, ${data}`);
+  const onSubmit = (data: SubmitType) => alert(`현재 값, ${data["text-area"]}`);
   const onError = (error: FieldErrors<SubmitType>) => {
     alert(`에러, ${error["text-area"]?.message}`);
   };
 
   return (
     <form onSubmit={handleSubmit(onSubmit, onError)}>
-      <button>전송</button>
+      <button className="border p-2">전송</button>
       <Textarea />
       <TextareaWithController
         withErrorMessage
